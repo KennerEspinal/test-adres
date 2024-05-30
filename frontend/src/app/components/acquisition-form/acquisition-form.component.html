@@ -1,0 +1,147 @@
+<h2 class="text-2xl font-bold text-center mb-8">Create Acquisitions</h2>
+
+<form [formGroup]="acquisitionForm" (ngSubmit)="onSubmit()">
+  <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div>
+      <label
+        for="presupuesto"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Presupuesto</label
+      >
+      <input
+        type="number"
+        id="presupuesto"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="0"
+        required
+        formControlName="presupuesto"
+      />
+    </div>
+    <div>
+      <label
+        for="unidad"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Unidad</label
+      >
+      <input
+        type="number"
+        id="unidad"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="0"
+        required
+        formControlName="unidad"
+      />
+    </div>
+    <div>
+      <label
+        for="tipoBienServicio"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Tipo de Bien/Servicio</label
+      >
+      <input
+        type="text"
+        id="tipoBienServicio"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Bien o Servicio"
+        required
+        formControlName="tipoBienServicio"
+      />
+    </div>
+    <div>
+      <label
+        for="cantidad"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >cantidad</label
+      >
+      <input
+        type="number"
+        id="cantidad"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="0"
+        required
+        formControlName="cantidad"
+      />
+    </div>
+    <div>
+      <label
+        for="valorUnitario"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Valor Unitario</label
+      >
+      <input
+        type="number"
+        id="valorUnitario"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="0.00"
+        required
+        formControlName="valorUnitario"
+      />
+    </div>
+    <div>
+      <label
+        for="valorTotal"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Valor Total</label
+      >
+      <input
+        type="number"
+        id="valorTotal"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="0.00"
+        required
+        formControlName="valorTotal"
+      />
+    </div>
+  </div>
+  <div class="mb-6">
+    <label
+      for="fechaAdquisicion"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Fecha de Adquisición</label
+    >
+    <input
+      type="text"
+      id="fechaAdquisicion"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="dd/mm/yyyy"
+      required
+      formControlName="fechaAdquisicion"
+    />
+  </div>
+  <div class="mb-6">
+    <label
+      for="proveedor"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Proveedor</label
+    >
+    <input
+      type="text"
+      id="proveedor"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Provedor"
+      required
+      formControlName="proveedor"
+    />
+  </div>
+  <div class="mb-6">
+    <label
+      for="documentacion"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Documentacion</label
+    >
+    <input
+      type="text"
+      id="documentacion"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder=""
+      required
+      formControlName="documentacion"
+    />
+  </div>
+  <button
+    type="submit"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+  >
+    Guardar Adquisición
+  </button>
+</form>

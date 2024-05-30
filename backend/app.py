@@ -1,12 +1,27 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI(
     title="API de Asquisitions",
     description="API to register acquisitions of goods and services",
     version="0.1"
 )
+
+origins = [
+    "*",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 class Acquisition(BaseModel):
     id: int
