@@ -34,6 +34,7 @@ cd test-adres
 > python -m venv venv
 > source venv/bin/activate  # En sistemas Linux/Mac
 > venv\Scripts\activate.bat  # En sistemas Windows
+> uvicorn app:app --reload  # En sistemas Windows
 > ````
 > Segundo Paso: Configuración para manejar el proyecto de Angular.
 > ```sh
